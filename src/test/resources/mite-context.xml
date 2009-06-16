@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+	
+	
+	<bean class="org.synyx.jmite.MiteClient" init-method="ping">
+		<constructor-arg value="http://acme.mite.yo.lk" />
+		<constructor-arg>
+			<bean class="org.synyx.jmite.auth.ApiKeyAuthentication">
+				<constructor-arg value="950847dad499680" />
+			</bean>
+	
+	 		<!--
+			<bean class="org.synyx.jmite.auth.UsernamePasswordAuthentication">
+				<constructor-arg value="nospam@yo.lk" />
+				<constructor-arg value="passwort" />
+			</bean>
+			 -->
+		</constructor-arg>
+		
+		<!-- Disable caching
+		<constructor-arg value="false" /> 
+		-->
+	</bean>
+
+</beans>
