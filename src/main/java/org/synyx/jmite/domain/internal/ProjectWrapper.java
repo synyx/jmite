@@ -1,5 +1,6 @@
 package org.synyx.jmite.domain.internal;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -15,7 +16,7 @@ import org.synyx.jmite.domain.Project;
 public class ProjectWrapper implements EntityCollectionWrapper<Project> {
 
     @XmlElement(name = "project")
-    private List<Project> projects;
+    private List<Project> projects = new ArrayList<Project>();
 
 
     /*

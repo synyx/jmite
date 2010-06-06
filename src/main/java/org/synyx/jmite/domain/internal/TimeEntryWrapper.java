@@ -1,5 +1,6 @@
 package org.synyx.jmite.domain.internal;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -15,7 +16,7 @@ import org.synyx.jmite.domain.TimeEntry;
 public class TimeEntryWrapper implements EntityCollectionWrapper<TimeEntry> {
 
     @XmlElement(name = "time-entry")
-    private List<TimeEntry> entries;
+    private List<TimeEntry> entries = new ArrayList<TimeEntry>();
 
 
     /*

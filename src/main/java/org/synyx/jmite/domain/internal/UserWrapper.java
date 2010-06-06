@@ -1,5 +1,6 @@
 package org.synyx.jmite.domain.internal;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -15,7 +16,7 @@ import org.synyx.jmite.domain.User;
 public class UserWrapper implements EntityCollectionWrapper<User> {
 
     @XmlElement(name = "user")
-    private List<User> users;
+    private List<User> users = new ArrayList<User>();
 
 
     /*
