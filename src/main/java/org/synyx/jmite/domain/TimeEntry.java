@@ -30,7 +30,7 @@ public class TimeEntry extends AbstractEntity implements Comparable<TimeEntry> {
     @XmlElement(name = "project-id")
     private Integer projectId;
 
-    @XmlElement(name = "cusomer-id")
+    @XmlElement(name = "customer-id")
     private Integer customerId;
 
     @XmlElement(name = "service-id")

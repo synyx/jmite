@@ -7,7 +7,6 @@ import java.util.Collections;
 import java.util.List;
 
 import org.joda.time.DateMidnight;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.synyx.jmite.domain.Customer;
 import org.synyx.jmite.domain.Project;
@@ -70,7 +69,6 @@ public class TimeEntriesIntegrationTest extends
 
 
     @Test
-    @Ignore
     public void queriesEntriesForCustomer() throws Exception {
 
         TimeEntry entry = get();
