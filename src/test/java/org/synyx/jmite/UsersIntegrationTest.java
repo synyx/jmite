@@ -40,7 +40,7 @@ public class UsersIntegrationTest extends
 
         User user = get();
 
-        assertEquals(user, query().withEmail(user.getEmail()).unique());
+        assertEquals(user, query().withEmail(user.getEmail()).execute().get(0));
     }
 
 

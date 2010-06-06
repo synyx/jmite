@@ -3,9 +3,11 @@ package org.synyx.jmite;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.joda.time.DateMidnight;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.synyx.jmite.domain.Customer;
 import org.synyx.jmite.domain.Project;
@@ -68,6 +70,7 @@ public class TimeEntriesIntegrationTest extends
 
 
     @Test
+    @Ignore
     public void queriesEntriesForCustomer() throws Exception {
 
         TimeEntry entry = get();
@@ -97,6 +100,9 @@ public class TimeEntriesIntegrationTest extends
             reference.addAll(query().at(temp).execute());
             temp = temp.plusDays(1);
         }
+
+        Collections.sort(result);
+        Collections.sort(reference);
 
         assertEquals(result, reference);
     }
