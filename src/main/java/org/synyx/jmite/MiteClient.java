@@ -262,4 +262,41 @@ public class MiteClient implements Mite {
 
         return this.users;
     }
+
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see org.synyx.jmite.Mite#tracker(org.synyx.jmite.domain.TimeEntry)
+     */
+    public Tracker tracker(TimeEntry entry) {
+
+        return new Tracker(template, entry);
+    }
+
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see org.synyx.jmite.Mite#tracker()
+     */
+    public Tracker tracker() {
+
+        return new Tracker(template, timeEntries().save(new TimeEntry()));
+    }
+
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see org.synyx.jmite.Mite#tracker(java.lang.String,
+     * org.synyx.jmite.domain.Project, org.synyx.jmite.domain.Service)
+     */
+    public Tracker tracker(String note, Project project, Service service) {
+
+        Tracker tracker = tracker();
+        tracker.toTimeEntry(note, project, service);
+
+        return tracker;
+    }
 }
