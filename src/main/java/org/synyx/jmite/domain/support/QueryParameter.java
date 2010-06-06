@@ -53,6 +53,6 @@ public class QueryParameter {
     @Override
     public String toString() {
 
-        return key + "=" + value.toString();
+        return key + "=" + (value == null ? "" : value.toString());
     }
 }
