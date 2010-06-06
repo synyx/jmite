@@ -2,21 +2,19 @@ package org.synyx.jmite;
 
 import org.apache.commons.httpclient.HttpClient;
 import org.springframework.http.client.ClientHttpRequestFactory;
-import org.springframework.http.converter.HttpMessageConverter;
-import org.springframework.http.converter.xml.MarshallingHttpMessageConverter;
-import org.springframework.oxm.Marshaller;
-import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.util.Assert;
 import org.synyx.jmite.auth.ApiKeyAuthentication;
 import org.synyx.jmite.auth.Authentication;
 import org.synyx.jmite.auth.UsernamePasswordAuthentication;
 import org.synyx.jmite.domain.Customers;
+import org.synyx.jmite.domain.Project;
 import org.synyx.jmite.domain.Projects;
+import org.synyx.jmite.domain.Service;
 import org.synyx.jmite.domain.Services;
 import org.synyx.jmite.domain.TimeEntries;
-import org.synyx.jmite.domain.User;
+import org.synyx.jmite.domain.TimeEntry;
+import org.synyx.jmite.domain.Tracker;
 import org.synyx.jmite.domain.Users;
-import org.synyx.jmite.domain.internal.UserWrapper;
 import org.synyx.jmite.internal.CachingHttpRequestFactory;
 import org.synyx.jmite.internal.MiteRestTemplate;
 import org.synyx.jmite.internal.UrlBuilder;
@@ -32,6 +30,8 @@ import org.synyx.jmite.internal.UrlBuilder;
  * @author Oliver Gierke - gierke@synyx.de
  */
 public class MiteClient implements Mite {
+
+    private static final String DEFAULT_USER_AGENT = "jmite-0.1";
 
     private MiteRestTemplate template;
 
@@ -54,7 +54,7 @@ public class MiteClient implements Mite {
      */
     public MiteClient(String location, Authentication authentication) {
 
-        this(location, authentication, true);
+        this(location, authentication, true, DEFAULT_USER_AGENT);
     }
 
 
@@ -68,9 +68,10 @@ public class MiteClient implements Mite {
      * @param doCaching whether to use ETag based caching or not
      */
     public MiteClient(String location, Authentication authentication,
-            boolean doCaching) {
+            boolean doCaching, String userAgent) {
 
-        this.template = new MiteRestTemplate(new UrlBuilder(location));
+        this.template =
+                new MiteRestTemplate(new UrlBuilder(location), userAgent);
 
         ClientHttpRequestFactory factory =
                 authentication.getFactory(new HttpClient());
@@ -107,6 +108,7 @@ public class MiteClient implements Mite {
         private Authentication authentication;
         private String baseUrl;
         private boolean doCaching = true;
+        private String userAgent = DEFAULT_USER_AGENT;
 
 
         public Builder(String baseUrl) {
@@ -160,6 +162,13 @@ public class MiteClient implements Mite {
         }
 
 
+        public Builder withUserAgent(String userAgent) {
+
+            this.userAgent = userAgent;
+            return this;
+        }
+
+
         /**
          * Builds the mite client.
          * 
@@ -172,7 +181,8 @@ public class MiteClient implements Mite {
             }
 
             MiteClient client =
-                    new MiteClient(baseUrl, authentication, doCaching);
+                    new MiteClient(baseUrl, authentication, doCaching,
+                            userAgent);
             client.ping();
 
             return client;

@@ -1,8 +1,11 @@
 package org.synyx.jmite.internal;
 
+import java.io.IOException;
 import java.util.Map;
 
 import org.springframework.http.HttpMethod;
+import org.springframework.http.client.ClientHttpRequest;
+import org.springframework.web.client.HttpMessageConverterExtractor;
 import org.springframework.web.client.RequestCallback;
 import org.springframework.web.client.ResponseExtractor;
 import org.springframework.web.client.RestClientException;
@@ -19,9 +22,10 @@ import org.synyx.jmite.domain.support.QueryParameter;
  */
 public class MiteRestTemplate extends RestTemplate {
 
-    private static final String[] NO_PARAMETERS = new String[] {};
+    private static final Object[] NO_PARAMETERS = new String[] {};
 
-    private UrlBuilder urlBuilder;
+    private final UrlBuilder urlBuilder;
+    private final String userAgent;
 
 
     /**
@@ -29,10 +33,11 @@ public class MiteRestTemplate extends RestTemplate {
      * 
      * @param urlBuilder
      */
-    public MiteRestTemplate(UrlBuilder urlBuilder) {
+    public MiteRestTemplate(UrlBuilder urlBuilder, String userAgent) {
 
         super();
         this.urlBuilder = urlBuilder;
+        this.userAgent = userAgent;
     }
 
 
@@ -48,10 +53,11 @@ public class MiteRestTemplate extends RestTemplate {
     @Override
     public <T> T execute(String url, HttpMethod method,
             RequestCallback requestCallback,
-            ResponseExtractor<T> responseExtractor,
-            Map<String, String> urlVariables) throws RestClientException {
+            ResponseExtractor<T> responseExtractor, Map<String, ?> urlVariables)
+            throws RestClientException {
 
-        return super.execute(urlBuilder.build(url), method, requestCallback,
+        return super.execute(urlBuilder.build(url), method,
+                new UserAgentAwareRequestCallback(requestCallback),
                 responseExtractor, urlVariables);
     }
 
@@ -68,10 +74,11 @@ public class MiteRestTemplate extends RestTemplate {
     @Override
     public <T> T execute(String url, HttpMethod method,
             RequestCallback requestCallback,
-            ResponseExtractor<T> responseExtractor, String... urlVariables)
+            ResponseExtractor<T> responseExtractor, Object... urlVariables)
             throws RestClientException {
 
-        return super.execute(urlBuilder.build(url), method, requestCallback,
+        return super.execute(urlBuilder.build(url), method,
+                new UserAgentAwareRequestCallback(requestCallback),
                 responseExtractor, urlVariables);
     }
 
@@ -106,8 +113,73 @@ public class MiteRestTemplate extends RestTemplate {
     }
 
 
+    /**
+     * Invokes a DELETE to the given URL and extracts the response body to be
+     * unmarshalled to the given repsonse type.
+     * 
+     * @param <T>
+     * @param url
+     * @param responseType
+     * @param parameters
+     * @return
+     */
+    public <T> T deleteForObject(String url, Class<T> responseType, int id) {
+
+        return execute(urlBuilder.build(url), HttpMethod.DELETE, null,
+                new HttpMessageConverterExtractor<T>(responseType,
+                        getMessageConverters()), String.valueOf(id));
+    }
+
+
+    public <T> T putForObject(String url, Class<T> responseType, int id) {
+
+        return execute(urlBuilder.build(url), HttpMethod.PUT, null,
+                new HttpMessageConverterExtractor<T>(responseType,
+                        getMessageConverters()), String.valueOf(id));
+    }
+
+
     public String build(String url) {
 
         return urlBuilder.build(url);
+    }
+
+    /**
+     * Delegating {@link RequestCallback} adding a {@code User-Agent} header to
+     * the request being created.
+     * 
+     * @author Oliver Gierke
+     */
+    private class UserAgentAwareRequestCallback implements RequestCallback {
+
+        private final RequestCallback delegate;
+
+
+        /**
+         * Creates a new {@link UserAgentAwareRequestCallback}.
+         * 
+         * @param delegate the actual callback to decorate
+         */
+        public UserAgentAwareRequestCallback(RequestCallback delegate) {
+
+            this.delegate = delegate;
+        }
+
+
+        /*
+         * (non-Javadoc)
+         * 
+         * @see
+         * org.springframework.web.client.RequestCallback#doWithRequest(org.
+         * springframework.http.client.ClientHttpRequest)
+         */
+        @Override
+        public void doWithRequest(ClientHttpRequest request) throws IOException {
+
+            request.getHeaders().add("User-Agent", userAgent);
+            if (null != delegate) {
+                delegate.doWithRequest(request);
+            }
+        }
     }
 }
