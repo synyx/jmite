@@ -31,6 +31,7 @@ public class MiteRestTemplate extends RestTemplate {
      */
     public MiteRestTemplate(UrlBuilder urlBuilder) {
 
+        super();
         this.urlBuilder = urlBuilder;
     }
 

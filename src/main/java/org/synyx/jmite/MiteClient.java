@@ -80,41 +80,12 @@ public class MiteClient implements Mite {
         }
 
         this.template.setRequestFactory(factory);
-        this.template
-                .setMessageConverters(new HttpMessageConverter[] { new MarshallingHttpMessageConverter(
-                        createMarshaller()) });
 
         this.customers = new Customers(template);
         this.projects = new Projects(template);
         this.services = new Services(template);
         this.timeEntries = new TimeEntries(template);
         this.users = new Users(template);
-    }
-
-
-    /**
-     * Creates a new marshaller to map Mite data against.
-     * 
-     * @return
-     */
-    private Marshaller createMarshaller() {
-
-        try {
-            Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
-
-            StringBuilder contextPath = new StringBuilder();
-            contextPath.append(User.class.getPackage().getName());
-            contextPath.append(":");
-            contextPath.append(UserWrapper.class.getPackage().getName());
-
-            marshaller.setContextPath(contextPath.toString());
-            marshaller.afterPropertiesSet();
-
-            return marshaller;
-
-        } catch (Exception e) {
-            throw new IllegalStateException(e);
-        }
     }
 
 
