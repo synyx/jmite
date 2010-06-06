@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 import org.jmite.domain.support.AbstractEntity;
 import org.jmite.domain.support.AbstractResourceHandler;
-import org.junit.Ignore;
 import org.junit.Test;
 
 
@@ -17,7 +16,6 @@ public abstract class AbstractMiteIntegrationTests<T extends AbstractEntity, S e
         extends AbstractReadingMiteIntegrationTests<T, S> {
 
     @Test
-    @Ignore
     public void create() {
 
         T resource = createResource();
@@ -31,7 +29,6 @@ public abstract class AbstractMiteIntegrationTests<T extends AbstractEntity, S e
 
 
     @Test
-    @Ignore
     public void update() {
 
         T resource = createResource();
