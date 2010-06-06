@@ -40,7 +40,7 @@ public class AbstractResourceHandler<T extends AbstractEntity> extends
      * 
      * @param entity
      */
-    public void save(T entity) {
+    public T save(T entity) {
 
         if (null == entity.getId()) {
 
@@ -53,5 +53,7 @@ public class AbstractResourceHandler<T extends AbstractEntity> extends
             getTemplate()
                     .put(getEntityUrl(), entity, entity.getId().toString());
         }
+
+        return entity;
     }
 }
