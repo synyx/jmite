@@ -6,10 +6,10 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 	
 	
-	<bean class="org.synyx.jmite.MiteClient" init-method="ping">
+	<bean class="org.jmite.MiteClient" init-method="ping">
 		<constructor-arg value="http://acme.mite.yo.lk" />
 		<constructor-arg>
-			<bean class="org.synyx.jmite.auth.ApiKeyAuthentication">
+			<bean class="org.jmite.auth.ApiKeyAuthentication">
 				<constructor-arg value="950847dad499680" />
 			</bean>
 	
