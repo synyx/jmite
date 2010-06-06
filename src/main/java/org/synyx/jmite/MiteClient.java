@@ -31,7 +31,7 @@ import org.synyx.jmite.internal.UrlBuilder;
  */
 public class MiteClient implements Mite {
 
-    private static final String DEFAULT_USER_AGENT = "jmite-0.1";
+    private static final String DEFAULT_USER_AGENT = "jmite/0.1";
 
     private MiteRestTemplate template;
 
