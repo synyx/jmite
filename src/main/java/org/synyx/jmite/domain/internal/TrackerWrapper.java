@@ -8,7 +8,7 @@ import org.synyx.jmite.domain.TrackerInfo;
 
 
 /**
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 @XmlRootElement(name = "tracker")
 public class TrackerWrapper {

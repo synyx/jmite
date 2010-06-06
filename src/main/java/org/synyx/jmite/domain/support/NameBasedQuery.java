@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Query type that is based on a {@code name} attribute.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class NameBasedQuery<T extends AbstractNamedEntity> extends
         AbstractQuery<T> {

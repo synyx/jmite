@@ -11,7 +11,7 @@ import org.synyx.jmite.domain.Users;
 /**
  * Integration test for Users resource.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class UsersIntegrationTest extends
         AbstractReadingMiteIntegrationTests<User, Users> {

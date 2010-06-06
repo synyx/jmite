@@ -12,7 +12,7 @@ import org.synyx.jmite.internal.MiteRestTemplate;
 /**
  * Resource handler to access readable resources.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class AbstractReadableResourceHandler<T extends AbstractEntity> {
 

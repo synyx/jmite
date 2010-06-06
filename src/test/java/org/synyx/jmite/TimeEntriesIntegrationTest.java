@@ -19,7 +19,7 @@ import org.synyx.jmite.domain.TimeEntryQuery;
 /**
  * Integration test for {@link TimeEntries} resource.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class TimeEntriesIntegrationTest extends
         AbstractReadingMiteIntegrationTests<TimeEntry, TimeEntries> {

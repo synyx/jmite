@@ -6,7 +6,7 @@ import org.synyx.jmite.domain.support.QueryParameter;
 /**
  * Time periods Mite understands in filtering.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public enum TimePeriod implements Parameterable {
 

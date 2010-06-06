@@ -5,7 +5,7 @@ package org.synyx.jmite.domain.support;
 /**
  * Interface for resource handlers that allow defining queries on the resource.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public interface QueryableResourceHandler<T extends AbstractQuery<S>, S extends AbstractEntity> {
 

@@ -11,7 +11,7 @@ import org.synyx.jmite.domain.support.QueryParameter;
 /**
  * Customer resource.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 @XmlRootElement
 @XmlType

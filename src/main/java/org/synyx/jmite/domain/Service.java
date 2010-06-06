@@ -8,7 +8,7 @@ import org.synyx.jmite.domain.support.QueryParameter;
 
 
 /**
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 @XmlRootElement
 public class Service extends AbstractNamedEntity implements Parameterable {

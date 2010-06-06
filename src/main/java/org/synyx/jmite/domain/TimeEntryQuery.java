@@ -12,7 +12,7 @@ import org.synyx.jmite.domain.support.QueryParameter;
  * Custom {@link AbstractQuery} implementation that allows to define filters to
  * access {@link TimeEntry} resources.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class TimeEntryQuery extends AbstractQuery<TimeEntry> {
 

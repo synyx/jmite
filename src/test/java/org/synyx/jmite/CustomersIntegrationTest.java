@@ -8,7 +8,7 @@ import org.synyx.jmite.domain.Customers;
 /**
  * Integration test for {@link Customers} resource.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class CustomersIntegrationTest extends
         AbstractReadingMiteIntegrationTests<Customer, Customers> {

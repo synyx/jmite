@@ -12,7 +12,7 @@ import org.synyx.jmite.domain.Tracker;
 
 
 /**
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class TimeTrackerIntegrationTest {
 

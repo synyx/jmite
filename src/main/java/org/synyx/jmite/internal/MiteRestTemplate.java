@@ -18,7 +18,7 @@ import org.synyx.jmite.domain.support.QueryParameter;
  * transaprently. Mite URLs conform to a strong scheme thus we just need to hand
  * the varying parts to the template.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class MiteRestTemplate extends RestTemplate {
 

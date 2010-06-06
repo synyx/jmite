@@ -8,7 +8,7 @@ import org.joda.time.format.DateTimeFormatter;
 /**
  * Class to abstract query parameters used to define filters on resources.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class QueryParameter {
 

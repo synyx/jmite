@@ -11,7 +11,7 @@ import org.synyx.jmite.domain.support.QueryParameter;
  * Custom {@link NameBasedQuery} that adds additional methods to add
  * {@link User} related filters.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class UserQuery extends NameBasedQuery<User> {
 

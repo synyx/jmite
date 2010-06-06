@@ -9,7 +9,7 @@ import org.synyx.jmite.domain.Customer;
 /**
  * Unit test for {@link IdExtractor}.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class IdExtractorUnitTest {
 

@@ -8,7 +8,7 @@ import org.springframework.web.util.UriTemplate;
  * Class to extract resource ids from URLs as well as an according pattern. Will
  * be used to derive ids applied by the server to the local entities.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 class IdExtractor<T extends AbstractEntity> {
 

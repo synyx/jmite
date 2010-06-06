@@ -9,7 +9,7 @@ import org.synyx.jmite.internal.MiteRestTemplate;
 /**
  * Users resource.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class Users extends AbstractReadableResourceHandler<User> implements
         QueryableResourceHandler<UserQuery, User> {

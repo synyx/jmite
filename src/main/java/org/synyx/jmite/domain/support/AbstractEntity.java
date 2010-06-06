@@ -10,7 +10,7 @@ import org.joda.time.DateTime;
 
 
 /**
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public abstract class AbstractEntity {

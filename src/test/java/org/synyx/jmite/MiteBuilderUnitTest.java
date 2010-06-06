@@ -9,7 +9,7 @@ import org.synyx.jmite.MiteClient.Builder;
 /**
  * Unit test for {@link Builder}.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class MiteBuilderUnitTest {
 

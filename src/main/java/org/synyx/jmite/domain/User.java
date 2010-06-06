@@ -9,7 +9,7 @@ import org.synyx.jmite.domain.support.AbstractNamedEntity;
 /**
  * User resource.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 @XmlRootElement
 public class User extends AbstractNamedEntity {

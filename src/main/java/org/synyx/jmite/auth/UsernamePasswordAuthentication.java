@@ -10,7 +10,7 @@ import org.springframework.http.client.CommonsClientHttpRequestFactory;
 /**
  * Authentication using username and password.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class UsernamePasswordAuthentication implements Authentication {
 

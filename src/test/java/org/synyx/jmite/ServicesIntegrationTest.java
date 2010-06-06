@@ -7,7 +7,7 @@ import org.synyx.jmite.domain.Services;
 /**
  * Integration test for {@link Services} resource.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class ServicesIntegrationTest extends
         AbstractMiteIntegrationTests<Service, Services> {

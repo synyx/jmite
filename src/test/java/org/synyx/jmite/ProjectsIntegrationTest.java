@@ -5,7 +5,7 @@ import org.synyx.jmite.domain.Projects;
 
 
 /**
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class ProjectsIntegrationTest extends
         AbstractReadingMiteIntegrationTests<Project, Projects> {

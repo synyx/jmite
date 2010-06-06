@@ -8,7 +8,7 @@ import org.synyx.jmite.internal.MiteRestTemplate;
 /**
  * Projects resource.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class Projects extends AbstractResourceHandler<Project> {
 

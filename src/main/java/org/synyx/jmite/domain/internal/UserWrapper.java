@@ -10,7 +10,7 @@ import org.synyx.jmite.domain.User;
 
 
 /**
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 @XmlRootElement(name = "users")
 public class UserWrapper implements EntityCollectionWrapper<User> {

@@ -27,7 +27,7 @@ import org.synyx.jmite.internal.UrlBuilder;
  * mechanism. Besides that there is a {@link Builder} available that allows
  * setting up the client via a fluent interface.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class MiteClient implements Mite {
 
@@ -101,7 +101,7 @@ public class MiteClient implements Mite {
     /**
      * Builder to create and configure a {@link Mite} instance.
      * 
-     * @author Oliver Gierke - gierke@synyx.de
+     * @author Oliver Gierke
      */
     public static class Builder {
 

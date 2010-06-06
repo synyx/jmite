@@ -11,7 +11,7 @@ import org.synyx.jmite.internal.MiteRestTemplate;
  * functionality from {@link AbstractResourceHandler} but adds the possibility
  * to lookup a {@link TimeEntryQuery} vie {@link #query()}.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class TimeEntries extends AbstractResourceHandler<TimeEntry> implements
         QueryableResourceHandler<TimeEntryQuery, TimeEntry> {

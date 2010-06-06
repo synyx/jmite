@@ -10,7 +10,7 @@ import org.synyx.jmite.domain.support.QueryParameter;
 /**
  * Project resource.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 @XmlRootElement
 public class Project extends AbstractNamedEntity implements Parameterable {

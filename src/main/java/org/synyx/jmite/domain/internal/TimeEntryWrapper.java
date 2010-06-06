@@ -10,7 +10,7 @@ import org.synyx.jmite.domain.TimeEntry;
 
 
 /**
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 @XmlRootElement(name = "time-entries")
 public class TimeEntryWrapper implements EntityCollectionWrapper<TimeEntry> {

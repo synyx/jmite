@@ -4,7 +4,7 @@ import javax.xml.bind.annotation.XmlElement;
 
 
 /**
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class AbstractNamedEntity extends AbstractEntity {
 

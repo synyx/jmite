@@ -9,7 +9,7 @@ import org.synyx.jmite.MiteClient;
 /**
  * Integration test for different authentication mechanisms
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class AuthenticationIntegrationTest {
 

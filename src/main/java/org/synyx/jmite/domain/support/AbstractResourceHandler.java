@@ -5,7 +5,7 @@ import org.synyx.jmite.internal.MiteRestTemplate;
 
 
 /**
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class AbstractResourceHandler<T extends AbstractEntity> extends
         AbstractReadableResourceHandler<T> {

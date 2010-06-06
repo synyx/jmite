@@ -8,7 +8,7 @@ import org.synyx.jmite.internal.MiteRestTemplate;
 /**
  * Customers resource.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class Customers extends AbstractResourceHandler<Customer> {
 

@@ -8,7 +8,7 @@ import org.synyx.jmite.internal.MiteRestTemplate;
 /**
  * Abstraction of the stopwatch available for Mite.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class Tracker {
 

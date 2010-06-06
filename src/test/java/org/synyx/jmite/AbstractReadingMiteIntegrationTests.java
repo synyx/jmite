@@ -14,7 +14,7 @@ import org.synyx.jmite.domain.support.AbstractReadableResourceHandler;
 /**
  * Integration test for readable resources.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public abstract class AbstractReadingMiteIntegrationTests<T extends AbstractEntity, S extends AbstractReadableResourceHandler<T>> {
 

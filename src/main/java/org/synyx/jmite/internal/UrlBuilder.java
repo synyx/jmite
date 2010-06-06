@@ -10,7 +10,7 @@ import org.synyx.jmite.domain.support.QueryParameter;
 /**
  * Builder class to create full URLs to access Mite.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class UrlBuilder {
 

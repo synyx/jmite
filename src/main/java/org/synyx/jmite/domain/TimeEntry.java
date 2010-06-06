@@ -13,7 +13,7 @@ import org.synyx.jmite.domain.support.QueryParameter;
 
 
 /**
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 @XmlRootElement(name = "time-entry")
 public class TimeEntry extends AbstractEntity implements Comparable<TimeEntry> {

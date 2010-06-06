@@ -5,7 +5,7 @@ import java.util.List;
 
 
 /**
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public abstract class AbstractQuery<T extends AbstractEntity> {
 

@@ -8,7 +8,7 @@ import org.synyx.jmite.internal.MiteRestTemplate;
 
 
 /**
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class Services extends AbstractResourceHandler<Service> implements
         QueryableResourceHandler<NameBasedQuery<Service>, Service> {

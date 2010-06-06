@@ -14,7 +14,7 @@ import org.synyx.jmite.domain.Users;
 /**
  * Interface to offer access to Mite resources.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public interface Mite {
 

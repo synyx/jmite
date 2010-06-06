@@ -9,7 +9,7 @@ import org.springframework.http.client.CommonsClientHttpRequestFactory;
 /**
  * Authentication based on an API key.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class ApiKeyAuthentication implements Authentication {
 

@@ -10,7 +10,7 @@ import org.synyx.jmite.domain.Project;
 
 
 /**
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 @XmlRootElement(name = "projects")
 public class ProjectWrapper implements EntityCollectionWrapper<Project> {

@@ -11,7 +11,7 @@ import org.synyx.jmite.domain.support.AbstractResourceHandler;
 /**
  * Integration test for resources that can be manipulated.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public abstract class AbstractMiteIntegrationTests<T extends AbstractEntity, S extends AbstractResourceHandler<T>>
         extends AbstractReadingMiteIntegrationTests<T, S> {

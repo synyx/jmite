@@ -1,7 +1,7 @@
 package org.synyx.jmite;
 
 /**
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 public class MiteTestConstants {
 

@@ -12,7 +12,7 @@ import org.synyx.jmite.domain.Customer;
 /**
  * Wrapper class to allow JAXB marshalling of {@link Customer} collections.
  * 
- * @author Oliver Gierke - gierke@synyx.de
+ * @author Oliver Gierke
  */
 @XmlRootElement(name = "customers")
 public class CustomerWrapper implements EntityCollectionWrapper<Customer> {
