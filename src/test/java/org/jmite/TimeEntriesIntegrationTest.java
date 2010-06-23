@@ -22,7 +22,7 @@ import org.junit.Test;
  * @author Oliver Gierke
  */
 public class TimeEntriesIntegrationTest extends
-        AbstractReadingMiteIntegrationTests<TimeEntry, TimeEntries> {
+        AbstractMiteIntegrationTests<TimeEntry, TimeEntries> {
 
     /*
      * (non-Javadoc)
@@ -109,5 +109,22 @@ public class TimeEntriesIntegrationTest extends
     private TimeEntryQuery query() {
 
         return getCollectionResource().query();
+    }
+
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see org.jmite.AbstractReadingMiteIntegrationTests#getResourceToCreate()
+     */
+    @Override
+    protected TimeEntry getResourceToCreate() {
+
+        TimeEntry reference = get();
+
+        TimeEntry timeEntry =
+                new TimeEntry(reference.getProject(mite), reference
+                        .getService(mite), 10);
+        return timeEntry;
     }
 }

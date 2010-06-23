@@ -11,7 +11,7 @@ import org.junit.Test;
  * @author Oliver Gierke
  */
 public class CustomersIntegrationTest extends
-        AbstractReadingMiteIntegrationTests<Customer, Customers> {
+        AbstractMiteIntegrationTests<Customer, Customers> {
 
     /*
      * (non-Javadoc)
@@ -36,5 +36,19 @@ public class CustomersIntegrationTest extends
     private Customer getCustomer() {
 
         return mite.customers().get(getId());
+    }
+
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see org.jmite.AbstractReadingMiteIntegrationTests#getResourceToCreate()
+     */
+    @Override
+    protected Customer getResourceToCreate() {
+
+        Customer customer = new Customer();
+        customer.setName("Testcustomer");
+        return customer;
     }
 }

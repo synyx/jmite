@@ -5,10 +5,12 @@ import org.jmite.domain.Projects;
 
 
 /**
+ * Integration test for {@link Project} instances.
+ * 
  * @author Oliver Gierke
  */
 public class ProjectsIntegrationTest extends
-        AbstractReadingMiteIntegrationTests<Project, Projects> {
+        AbstractMiteIntegrationTests<Project, Projects> {
 
     /*
      * (non-Javadoc)
@@ -21,4 +23,17 @@ public class ProjectsIntegrationTest extends
         return mite.projects();
     }
 
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see org.jmite.AbstractReadingMiteIntegrationTests#getResourceToCreate()
+     */
+    @Override
+    protected Project getResourceToCreate() {
+
+        Project project = new Project();
+        project.setName("Testproject");
+        return project;
+    }
 }
