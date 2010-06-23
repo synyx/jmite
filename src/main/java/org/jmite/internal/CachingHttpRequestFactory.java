@@ -220,6 +220,12 @@ public class CachingHttpRequestFactory implements ClientHttpRequestFactory {
 
             return request.getHeaders();
         }
+
+
+        public URI getURI() {
+
+            return this.uri;
+        }
     }
 
     private static class Cache {
