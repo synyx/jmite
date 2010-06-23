@@ -1,0 +1,14 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: ${project.artifactId}
+Bundle-Name: ${project.name}
+Bundle-Vendor: jmite.org
+Bundle-Version: ${project.version}
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Template: 
+ org.jmite.*;version="${project.version}"
+Import-Template: 
+ javax.xml.bind.*;version="[2.1.0,3.0.0)",
+ org.apache.commons.httpclient.*;version="[3.1.0,4.0.0)",
+ org.joda.time.*;version="[1.6.0,2.0.0)",
+ org.springframework.*;version="${spring.version:[=.=.=.=,+1.0.0)}",
+ org.w3c.dom.*;version="0.0.0"
