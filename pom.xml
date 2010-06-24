@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.jmite</groupId>
 	<artifactId>org.jmite</artifactId>
-	<version>0.1.0.RELEASE</version>
+	<version>0.2.0.BUILD-SNAPSHOT</version>
 
 	<name>jMite</name>
     <description>Java library to access Mite.</description>
@@ -246,9 +246,9 @@
     </issueManagement>
     
     <scm>
-        <url>http://svn.synyx.org/synyx/opensource/jmite/tags/org.jmite-0.1.0.RELEASE</url>
-        <connection>scm:svn:http://svn.synyx.org/synyx/opensource/jmite/tags/org.jmite-0.1.0.RELEASE</connection>
-        <developerConnection>scm:svn:svn+ssh://synyxsvn/var/svn/synyx/opensource/jmite/tags/org.jmite-0.1.0.RELEASE</developerConnection>
+        <url>http://svn.synyx.org/synyx/opensource/jmite/trunk</url>
+        <connection>scm:svn:http://svn.synyx.org/synyx/opensource/jmite/trunk</connection>
+        <developerConnection>scm:svn:svn+ssh://synyxsvn/var/svn/synyx/opensource/jmite/trunk</developerConnection>
     </scm>
     
     <distributionManagement>
