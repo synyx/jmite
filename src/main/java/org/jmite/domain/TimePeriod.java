@@ -1,5 +1,7 @@
 package org.jmite.domain;
 
+import java.util.Locale;
+
 import org.jmite.domain.support.QueryParameter;
 
 
@@ -19,6 +21,6 @@ public enum TimePeriod implements Parameterable {
      */
     public QueryParameter toQueryParameter() {
 
-        return new QueryParameter("at", this.toString().toLowerCase());
+        return new QueryParameter("at", this.toString().toLowerCase(Locale.US));
     }
 }
