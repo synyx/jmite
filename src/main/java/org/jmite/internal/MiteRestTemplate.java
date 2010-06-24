@@ -170,7 +170,6 @@ public class MiteRestTemplate extends RestTemplate {
          * org.springframework.web.client.RequestCallback#doWithRequest(org.
          * springframework.http.client.ClientHttpRequest)
          */
-        @Override
         public void doWithRequest(ClientHttpRequest request) throws IOException {
 
             request.getHeaders().add("User-Agent", userAgent);
