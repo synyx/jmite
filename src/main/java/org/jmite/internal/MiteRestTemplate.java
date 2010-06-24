@@ -9,7 +9,6 @@ import org.springframework.http.client.ClientHttpRequest;
 import org.springframework.web.client.HttpMessageConverterExtractor;
 import org.springframework.web.client.RequestCallback;
 import org.springframework.web.client.ResponseExtractor;
-import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 
@@ -53,8 +52,7 @@ public class MiteRestTemplate extends RestTemplate {
     @Override
     public <T> T execute(String url, HttpMethod method,
             RequestCallback requestCallback,
-            ResponseExtractor<T> responseExtractor, Map<String, ?> urlVariables)
-            throws RestClientException {
+            ResponseExtractor<T> responseExtractor, Map<String, ?> urlVariables) {
 
         return super.execute(urlBuilder.build(url), method,
                 new UserAgentAwareRequestCallback(requestCallback),
@@ -74,8 +72,7 @@ public class MiteRestTemplate extends RestTemplate {
     @Override
     public <T> T execute(String url, HttpMethod method,
             RequestCallback requestCallback,
-            ResponseExtractor<T> responseExtractor, Object... urlVariables)
-            throws RestClientException {
+            ResponseExtractor<T> responseExtractor, Object... urlVariables) {
 
         return super.execute(urlBuilder.build(url), method,
                 new UserAgentAwareRequestCallback(requestCallback),
@@ -90,7 +87,7 @@ public class MiteRestTemplate extends RestTemplate {
      * .String, java.lang.Class, java.lang.String[])
      */
     public <T> T getForObject(String url, Class<T> responseType,
-            QueryParameter... parameters) throws RestClientException {
+            QueryParameter... parameters) {
 
         return getForObject(urlBuilder.build(url, parameters), responseType);
     }
