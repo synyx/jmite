@@ -4,3 +4,9 @@ TimeEntry
 User
 Service
 TrackerInfo
+CustomerWrapper
+ProjectWrapper
+TimeEntryWrapper
+ServiceWrapper
+UserWrapper
+TrackerWrapper

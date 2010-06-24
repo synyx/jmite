@@ -4,7 +4,6 @@ import static org.springframework.http.HttpStatus.*;
 
 import java.util.List;
 
-import org.jmite.domain.internal.EntityCollectionWrapper;
 import org.jmite.internal.MiteRestTemplate;
 import org.springframework.web.client.HttpClientErrorException;
 

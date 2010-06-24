@@ -1,7 +1,6 @@
 package org.jmite.domain;
 
 import org.jmite.Mite;
-import org.jmite.domain.internal.TrackerWrapper;
 import org.jmite.internal.MiteRestTemplate;
 
 

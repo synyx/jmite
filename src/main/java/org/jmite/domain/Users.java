@@ -1,6 +1,5 @@
 package org.jmite.domain;
 
-import org.jmite.domain.internal.UserWrapper;
 import org.jmite.domain.support.AbstractReadableResourceHandler;
 import org.jmite.domain.support.QueryableResourceHandler;
 import org.jmite.internal.MiteRestTemplate;

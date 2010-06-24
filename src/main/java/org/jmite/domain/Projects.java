@@ -1,6 +1,5 @@
 package org.jmite.domain;
 
-import org.jmite.domain.internal.ProjectWrapper;
 import org.jmite.domain.support.AbstractResourceHandler;
 import org.jmite.internal.MiteRestTemplate;
 

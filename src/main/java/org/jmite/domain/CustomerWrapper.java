@@ -1,4 +1,4 @@
-package org.jmite.domain.internal;
+package org.jmite.domain;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,8 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import org.jmite.domain.Customer;
+import org.jmite.domain.support.EntityCollectionWrapper;
+
 
 
 /**
@@ -15,7 +16,7 @@ import org.jmite.domain.Customer;
  * @author Oliver Gierke
  */
 @XmlRootElement(name = "customers")
-public class CustomerWrapper implements EntityCollectionWrapper<Customer> {
+class CustomerWrapper implements EntityCollectionWrapper<Customer> {
 
     @XmlElement(name = "customer")
     private List<Customer> customers = new ArrayList<Customer>();

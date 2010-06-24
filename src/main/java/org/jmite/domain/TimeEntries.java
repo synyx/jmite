@@ -1,6 +1,5 @@
 package org.jmite.domain;
 
-import org.jmite.domain.internal.TimeEntryWrapper;
 import org.jmite.domain.support.AbstractResourceHandler;
 import org.jmite.domain.support.QueryableResourceHandler;
 import org.jmite.internal.MiteRestTemplate;

@@ -1,6 +1,5 @@
 package org.jmite.domain.support;
 
-import org.jmite.domain.internal.EntityCollectionWrapper;
 import org.jmite.internal.MiteRestTemplate;
 
 

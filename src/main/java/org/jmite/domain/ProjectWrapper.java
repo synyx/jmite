@@ -1,4 +1,4 @@
-package org.jmite.domain.internal;
+package org.jmite.domain;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,14 +6,14 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import org.jmite.domain.Project;
+import org.jmite.domain.support.EntityCollectionWrapper;
 
 
 /**
  * @author Oliver Gierke
  */
 @XmlRootElement(name = "projects")
-public class ProjectWrapper implements EntityCollectionWrapper<Project> {
+class ProjectWrapper implements EntityCollectionWrapper<Project> {
 
     @XmlElement(name = "project")
     private List<Project> projects = new ArrayList<Project>();

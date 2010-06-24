@@ -1,4 +1,4 @@
-package org.jmite.domain.internal;
+package org.jmite.domain;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,14 +6,14 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import org.jmite.domain.User;
+import org.jmite.domain.support.EntityCollectionWrapper;
 
 
 /**
  * @author Oliver Gierke
  */
 @XmlRootElement(name = "users")
-public class UserWrapper implements EntityCollectionWrapper<User> {
+class UserWrapper implements EntityCollectionWrapper<User> {
 
     @XmlElement(name = "user")
     private List<User> users = new ArrayList<User>();

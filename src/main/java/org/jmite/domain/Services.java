@@ -1,6 +1,5 @@
 package org.jmite.domain;
 
-import org.jmite.domain.internal.ServiceWrapper;
 import org.jmite.domain.support.AbstractResourceHandler;
 import org.jmite.domain.support.NameBasedQuery;
 import org.jmite.domain.support.QueryableResourceHandler;

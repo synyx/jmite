@@ -1,19 +1,17 @@
-package org.jmite.domain.internal;
+package org.jmite.domain;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElements;
 import javax.xml.bind.annotation.XmlRootElement;
-
-import org.jmite.domain.TrackerInfo;
 
 
 /**
  * @author Oliver Gierke
  */
 @XmlRootElement(name = "tracker")
-public class TrackerWrapper {
+class TrackerWrapper {
 
-    @XmlElements( { @XmlElement(name = "stopped-time-entry"),
+    @XmlElements({ @XmlElement(name = "stopped-time-entry"),
             @XmlElement(name = "tracking-time-entry") })
     private TrackerInfo info;
 
