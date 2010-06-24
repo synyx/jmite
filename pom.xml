@@ -4,10 +4,10 @@
 	<artifactId>org.jmite</artifactId>
 	<version>0.2.0.BUILD-SNAPSHOT</version>
 
-	<name>jMite</name>
+    <name>jMite</name>
     <description>Java library to access Mite.</description>
     <url>http://jmite.synyx.org</url>
-    
+
     <developers>
         <developer>
             <id>gierke</id>
@@ -21,9 +21,9 @@
             </roles>
         </developer>
     </developers>
-    
+
     <inceptionYear>2010</inceptionYear>
-    
+
     <licenses>
         <license>
             <name>Apache 2.0</name>
@@ -32,84 +32,84 @@
         </license>
     </licenses>
 
-	<properties>
-		<spring.version>3.0.3.RELEASE</spring.version>
-	</properties>
+    <properties>
+        <spring.version>3.0.3.RELEASE</spring.version>
+    </properties>
 
-	<dependencies>
+    <dependencies>
 
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>org.springframework.web</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>org.springframework.oxm</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>javax.xml.bind</groupId>
-			<artifactId>jaxb-api</artifactId>
-			<version>2.1</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.sun.xml.bind</groupId>
-			<artifactId>jaxb-impl</artifactId>
-			<version>2.1.10</version>
-			<scope>runtime</scope>
-		</dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
 
-		<dependency>
-			<groupId>commons-httpclient</groupId>
-			<artifactId>commons-httpclient</artifactId>
-			<version>3.1</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>joda-time</groupId>
-			<artifactId>joda-time</artifactId>
-			<version>1.6</version>
-		</dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.oxm</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
 
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>org.springframework.test</artifactId>
-			<version>${spring.version}</version>
-			<scope>test</scope>
-		</dependency>
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.1</version>
+        </dependency>
 
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.7</version>
-			<scope>test</scope>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.apache.log4j</groupId>
-			<artifactId>com.springsource.org.apache.log4j</artifactId>
-			<version>1.2.15</version>
-			<scope>test</scope>
-		</dependency>
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
+            <version>2.1.10</version>
+            <scope>runtime</scope>
+        </dependency>
 
-	</dependencies>
-	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<!-- http://maven.apache.org/plugins/maven-compiler-plugin/ -->
-					<source>1.5</source>
-					<target>1.5</target>
-				</configuration>
-			</plugin>
-            
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+            <version>3.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>1.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.test</artifactId>
+            <version>${spring.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.7</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.log4j</groupId>
+            <artifactId>com.springsource.org.apache.log4j</artifactId>
+            <version>1.2.15</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <!-- http://maven.apache.org/plugins/maven-compiler-plugin/ -->
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -118,7 +118,7 @@
                     <useDefaultManifestFile>true</useDefaultManifestFile>
                 </configuration>
             </plugin>
-            
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
@@ -132,7 +132,7 @@
                     </execution>
                 </executions>
             </plugin>
-            
+
             <plugin>
                 <groupId>com.springsource.bundlor</groupId>
                 <artifactId>com.springsource.bundlor.maven</artifactId>
@@ -150,7 +150,7 @@
                     <failOnWarnings>false</failOnWarnings>
                 </configuration>
             </plugin>
-            
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
@@ -160,22 +160,50 @@
                     <scmCommentPrefix> * [maven-release-plugin] - </scmCommentPrefix>
                 </configuration>
             </plugin>
-		</plugins>
-	</build>
-    
+        </plugins>
+    </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.5</version>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jdepend-maven-plugin</artifactId>
+                <version>2.0-beta-2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <targetJdk>1.5</targetJdk>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>javancss-maven-plugin</artifactId>
+                <version>2.0-beta-2</version>
+            </plugin>
+        </plugins>
+    </reporting>
+
     <profiles>
         <profile>
-            <!--  Additional plugins for deploy step -->
+            <!-- Additional plugins for deploy step -->
             <id>release</id>
             <activation>
                 <property>
                     <name>performRelease</name>
-                    <value>true</value>                
+                    <value>true</value>
                 </property>
             </activation>
             <build>
                 <plugins>
-                    <!--  Sign artifacts -->
+                    <!-- Sign artifacts -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
@@ -194,7 +222,7 @@
                             </execution>
                         </executions>
                     </plugin>
-                    
+
                     <!-- Package JavaDoc -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
@@ -209,23 +237,23 @@
                             </execution>
                         </executions>
                     </plugin>
-                    
+
                 </plugins>
             </build>
         </profile>
     </profiles>
 
-	<repositories>
-		<repository>
-			<id>SpringSource Enterprise Bundle Repository - External Bundle</id>
-			<url>http://repository.springsource.com/maven/bundles/external</url>
-		</repository>
+    <repositories>
+        <repository>
+            <id>SpringSource Enterprise Bundle Repository - External Bundle</id>
+            <url>http://repository.springsource.com/maven/bundles/external</url>
+        </repository>
         <repository>
             <id>SpringSource Enterprise Bundle Repository - Release Bundle</id>
             <url>http://repository.springsource.com/maven/bundles/release</url>
         </repository>
-	</repositories>
-    
+    </repositories>
+
     <pluginRepositories>
 
         <pluginRepository>
@@ -235,7 +263,7 @@
         </pluginRepository>
 
     </pluginRepositories>
-    
+
     <ciManagement>
         <system>Hudson</system>
         <url>http://ci.synyx.org</url>
@@ -245,13 +273,13 @@
         <system>Redmine</system>
         <url>http://jmite.synyx.org/</url>
     </issueManagement>
-    
+
     <scm>
         <url>http://svn.synyx.org/synyx/opensource/jmite/trunk</url>
         <connection>scm:svn:http://svn.synyx.org/synyx/opensource/jmite/trunk</connection>
         <developerConnection>scm:svn:svn+ssh://synyxsvn/var/svn/synyx/opensource/jmite/trunk</developerConnection>
     </scm>
-    
+
     <distributionManagement>
         <site>
             <id>static.synyx.org</id>
@@ -266,5 +294,5 @@
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
-    
+
 </project>
