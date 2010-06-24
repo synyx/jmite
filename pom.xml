@@ -6,6 +6,7 @@
 
 	<name>jMite</name>
     <description>Java library to access Mite.</description>
+    <url>http://jmite.synyx.org</url>
     
     <developers>
         <developer>
