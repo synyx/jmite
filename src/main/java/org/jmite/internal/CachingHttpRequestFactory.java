@@ -37,6 +37,11 @@ public class CachingHttpRequestFactory implements ClientHttpRequestFactory {
     private Cache cache = new Cache();
 
 
+    /**
+     * Creates a new {@link CachingHttpRequestFactory}.
+     * 
+     * @param delegate
+     */
     public CachingHttpRequestFactory(ClientHttpRequestFactory delegate) {
 
         this.delegate = delegate;
@@ -87,8 +92,9 @@ public class CachingHttpRequestFactory implements ClientHttpRequestFactory {
      * 
      * @author Oliver Gierke
      */
-    private class CachingHttpResponse implements ClientHttpResponse {
+    private static class CachingHttpResponse implements ClientHttpResponse {
 
+        private static final int BUFFER_SIZE = 1024;
         private ByteArrayOutputStream output = new ByteArrayOutputStream();
         private ClientHttpResponse delegate;
 
@@ -99,7 +105,7 @@ public class CachingHttpRequestFactory implements ClientHttpRequestFactory {
         public CachingHttpResponse(ClientHttpResponse response)
                 throws IOException {
 
-            byte[] buffer = new byte[1024];
+            byte[] buffer = new byte[BUFFER_SIZE];
             InputStream stream = response.getBody();
             int n = 0;
 
